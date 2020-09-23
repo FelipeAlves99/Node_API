@@ -17,11 +17,13 @@ const Order = require("./models/order");
 //load routes
 const index = require("./routes/index");
 const product = require("./routes/product");
+const customer = require("./routes/customer");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/", index);
 app.use("/products", product);
+app.use("/customer", customer);
 
 module.exports = app;
