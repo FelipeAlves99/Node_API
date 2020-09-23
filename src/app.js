@@ -1,8 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const moongose = require("mongoose");
 
 const app = express();
-const router = express.Router();
+
+moongose.connect(
+    "mongodb+srv://FelipeAlves:!Kawasaki01@cluster0.jgytt.gcp.mongodb.net/Cluster0?retryWrites=true&w=majority"
+);
 
 const index = require("./routes/index");
 const product = require("./routes/product");
