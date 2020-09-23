@@ -11,6 +11,8 @@ moongose.connect(
 
 //load models
 const Product = require("./models/product");
+const Custumer = require("./models/customer");
+const Order = require("./models/order");
 
 //load routes
 const index = require("./routes/index");
