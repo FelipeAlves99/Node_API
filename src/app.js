@@ -1,13 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const moongose = require("mongoose");
+const config = require("./config");
 
 const app = express();
 
 // DB connection
-moongose.connect(
-    "mongodb+srv://FelipeAlves:!Kawasaki01@cluster0.jgytt.gcp.mongodb.net/Cluster0?retryWrites=true&w=majority"
-);
+moongose.connect(config.connectionString);
 
 //load models
 const Product = require("./models/product");
